@@ -1,9 +1,7 @@
-
 package sa1021
 
 import (
 	"honnef.co/go/tools/staticcheck"
-	"golang.org/x/tools/go/analysis"
 )
 
-var Analyzer = staticcheck.Analyzers["sa1021"]
+var Analyzer = staticcheck.Analyzers["SA1021"]

@@ -1,9 +1,7 @@
-
 package sa5008
 
 import (
 	"honnef.co/go/tools/staticcheck"
-	"golang.org/x/tools/go/analysis"
 )
 
-var Analyzer = staticcheck.Analyzers["sa5008"]
+var Analyzer = staticcheck.Analyzers["SA5008"]
