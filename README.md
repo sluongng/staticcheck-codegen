@@ -26,6 +26,8 @@ To use this repo, you need to have this and staticcheck imported as `go_reposito
 ```starlark
     # Note that this repo uses several malfunction packages as testdata
     # so we need to tell Gazelle to skip those packages when generate BUILD files
+    #
+    # Don't forget to update this to latest 'version' and matching 'sum'
     go_repository(
         name = "co_honnef_go_tools",
         build_directives = [
@@ -92,7 +94,5 @@ The code gen binary also provides you with a list of JSON config for you to copy
 To obtain both the deps and the json config, just run `go run .` in this repo to have them printed in stdout.
 
 ## TODO
-
-- [ ] Make the code compatible with staticcheck 2021.1.1(v0.2.1): In a recent refactoring, staticcheck stopped exporting the analyzer as a mapped of `checkName -> analyzer` but instead just export them as a slice of analyzer instead. I need to check with staticcheck author to see whether that change can be reversed. If not, we can build a reverse map of `docTitle -> checkName` and get the checkName(i.e. `SA1007`) via matching docTitle.
 
 - [ ] Make a `deps.bzl` and `def.bzl` so that people can use this repository as a bazel dependency out of the box. Preferablly with the list of nogo dependencies exported as constants.

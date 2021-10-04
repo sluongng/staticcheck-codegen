@@ -12,7 +12,6 @@ import (
 	"strings"
 	"text/template"
 
-	"golang.org/x/tools/go/analysis"
 	"honnef.co/go/tools/staticcheck"
 	"honnef.co/go/tools/stylecheck"
 )
@@ -61,18 +60,14 @@ func main() {
 		log.Fatalf("os.Mkdir: %v", err)
 	}
 
-	analyzerMap := staticcheck.Analyzers
-	for k, v := range stylecheck.Analyzers {
-		analyzerMap[k] = v
-	}
-
 	keys := []string{}
-	for k, v := range analyzerMap {
+	for _, v := range append(staticcheck.Analyzers, stylecheck.Analyzers...) {
+		k := v.Analyzer.Name
 		keys = append(keys, k)
 		kUpper := k
 		k = strings.ToLower(k)
 
-		err = os.Chdir("_gen")
+		err = os.Chdir(CodeGenDir)
 		if err != nil {
 			log.Fatalf("os.Chdir: %v", err)
 		}
@@ -100,12 +95,10 @@ func main() {
 		}
 
 		data := struct {
-			Analyzer  *analysis.Analyzer
 			Key       string
 			KeyUpper  string
 			CheckType string
 		}{
-			Analyzer:  v,
 			Key:       k,
 			KeyUpper:  kUpper,
 			CheckType: checkType,
