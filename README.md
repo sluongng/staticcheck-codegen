@@ -39,7 +39,7 @@ To use this repo, you need to have this and staticcheck imported as `go_reposito
 
 The code gen binary will generate a list of dependencies to add in your BUILD file that define the `nogo` target
 
-```
+```starlark
 govet = [
     "@org_golang_x_tools//go/analysis/passes/asmdecl:go_tool_library",
     "@org_golang_x_tools//go/analysis/passes/assign:go_tool_library",
@@ -69,7 +69,7 @@ nogo(
 
 The code gen binary also provides you with a list of JSON config for you to copy paste to your nogo_config.json file
 
-```
+```json
   ...
   "SA1005": {
     "exclude_files": {
@@ -88,6 +88,8 @@ The code gen binary also provides you with a list of JSON config for you to copy
   },
   ...
 ```
+
+To obtain both the deps and the json config, just run `go run .` in this repo to have them printed in stdout.
 
 ## TODO
 
