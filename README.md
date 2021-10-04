@@ -34,8 +34,15 @@ To use this repo, you need to have this and staticcheck imported as `go_reposito
             "gazelle:exclude **/testdata/**",  # keep
         ],
         importpath = "honnef.co/go/tools",
-        sum = "h1:UoveltGrhghAA7ePc+e+QYDHXrBps2PqFZiHkGR/xK8=",
-        version = "v0.0.1-2020.1.4",
+        sum = "h1:/EPr//+UMMXwMTkXvCCoaJDq8cpjMO80Ou+L4PDo2mY=",
+        version = "v0.2.1",
+    )
+    # keep
+    go_repository(
+        name = "com_github_sluongng_staticcheck_codegen",
+        importpath = "github.com/sluongng/staticcheck-codegen",
+        sum = "h1:qW2KdfRPsUOnfp4Jqx5o9R8p7YujiOvvkJ5gCEeV9Xo=",
+        version = "v0.0.0-20211004083213-a99989664707",
     )
 ```
 
@@ -53,12 +60,12 @@ govet = [
 ]
 
 staticcheck = [
-    "//projects/staticcheck-codegen/_gen/sa1000:go_tool_library",
+    "@com_github_sluongng_staticcheck_codegen//_gen/sa1000:go_tool_library",
     ...
-    "//projects/staticcheck-codegen/_gen/sa9005:go_tool_library",
-    "//projects/staticcheck-codegen/_gen/st1000:go_tool_library",
+    "@com_github_sluongng_staticcheck_codegen//_gen/sa9005:go_tool_library",
+    "@com_github_sluongng_staticcheck_codegen//_gen/st1000:go_tool_library",
     ...
-    "//projects/staticcheck-codegen/_gen/st1022:go_tool_library",
+    "@com_github_sluongng_staticcheck_codegen//_gen/st1022:go_tool_library",
 ]
 
 nogo(
