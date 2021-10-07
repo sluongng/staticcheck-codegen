@@ -14,6 +14,7 @@ import (
 	"text/template"
 
 	"honnef.co/go/tools/analysis/lint"
+	"honnef.co/go/tools/quickfix"
 	"honnef.co/go/tools/simple"
 	"honnef.co/go/tools/staticcheck"
 	"honnef.co/go/tools/stylecheck"
@@ -34,6 +35,7 @@ var Analyzer = {{ .CheckType }}.Analyzers[{{ .Index }}].Analyzer`
 const (
 	PrefixStyleCheck  = "ST"
 	PrefixStaticCheck = "SA"
+	PrefixQuickFix    = "QF"
 	CodeGenDir        = "_gen"
 )
 
@@ -61,7 +63,12 @@ func main() {
 	}
 
 	keys := []string{}
-	for _, analyzers := range [][]*lint.Analyzer{staticcheck.Analyzers, stylecheck.Analyzers, simple.Analyzers} {
+	for _, analyzers := range [][]*lint.Analyzer{
+		staticcheck.Analyzers,
+		stylecheck.Analyzers,
+		simple.Analyzers,
+		quickfix.Analyzers,
+	} {
 		sort.Slice(analyzers, func(i, j int) bool {
 			return analyzers[i].Analyzer.Name > analyzers[j].Analyzer.Name
 		})
@@ -91,6 +98,9 @@ func main() {
 			}
 			if strings.HasPrefix(k, strings.ToLower(PrefixStyleCheck)) {
 				checkType = "stylecheck"
+			}
+			if strings.HasPrefix(k, strings.ToLower(PrefixQuickFix)) {
+				checkType = "quickfix"
 			}
 
 			tplFiles := []struct {

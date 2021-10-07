@@ -217,5 +217,22 @@ SIMPLE_ANALYZERS = [
     ]
 ]
 
+QUICKFIX_ANALYZERS = [
+    "@com_github_sluongng_staticcheck_codegen//_gen/{}:go_default_library".format(package)
+    for package in [
+        "qf1001",
+        "qf1002",
+        "qf1003",
+        "qf1004",
+        "qf1005",
+        "qf1006",
+        "qf1007",
+        "qf1008",
+        "qf1009",
+        "qf1010",
+        "qf1011",
+    ]
+]
+
 # Provide a sensible default for users to get started easily
-SENSIBLE_ANALYZERS = GO_VET + STATICCHECK_ANALYZERS + STYLECHECK_ANALYZERS + SIMPLE_ANALYZERS
+SENSIBLE_ANALYZERS = GO_VET + STATICCHECK_ANALYZERS + STYLECHECK_ANALYZERS + SIMPLE_ANALYZERS + QUICKFIX_ANALYZERS

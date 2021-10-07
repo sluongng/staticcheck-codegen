@@ -1,4 +1,59 @@
 {
+  "QF1001": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1002": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1003": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1004": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1005": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1006": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1007": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1008": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1009": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1010": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "QF1011": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
   "S1000": {
     "exclude_files": {
       "external/": "third_party"
