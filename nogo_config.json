@@ -421,7 +421,8 @@
   },
   "ST1000": {
     "exclude_files": {
-      "external/": "third_party"
+      "external/": "third_party",
+      "rules_go_work": "rules_go generated code"
     }
   },
   "ST1001": {

@@ -149,7 +149,12 @@ func main() {
 	}
 	temp := make(map[string]*config)
 	for _, v := range append(govetChecks, keys...) {
-		temp[v] = &config{ExcludeFiles: map[string]string{"external/": "third_party"}}
+		c := &config{ExcludeFiles: map[string]string{"external/": "third_party"}}
+		if v == "ST1000" {
+			c.ExcludeFiles["rules_go_work"] = "rules_go generated code"
+		}
+
+		temp[v] = c
 	}
 	b, err := json.MarshalIndent(temp, "", "  ")
 	if err != nil {
