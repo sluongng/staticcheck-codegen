@@ -108,5 +108,5 @@ Then you can customize it to your liking (i.e. allow excluding some paths from c
 
 - [ ] Implement automatic generation/update of def.bzl by using buildtools library.
 
-- Tidy up the code
+- [ ] Tidy up the code
 
