@@ -540,7 +540,7 @@
       "external/": "third_party"
     }
   },
-  "copylock": {
+  "copylocks": {
     "exclude_files": {
       "external/": "third_party"
     }

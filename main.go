@@ -159,6 +159,10 @@ func main() {
 			v = "composites"
 		}
 
+		if v == "copylock" {
+			v = "copylocks"
+		}
+
 		temp[v] = c
 	}
 	b, err := json.MarshalIndent(temp, "", "  ")
