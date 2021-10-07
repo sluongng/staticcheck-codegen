@@ -11,14 +11,14 @@ so nogo can use it.
 Minimum rules_go v0.29.0 is required
 
 ```starlark
-    http_archive(
-        name = "io_bazel_rules_go",
-        sha256 = "2b1641428dff9018f9e85c0384f03ec6c10660d935b750e3fa1492a281a53b0f",
-        urls = [
-            "https://github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
-        ],
-    )
+http_archive(
+    name = "io_bazel_rules_go",
+    sha256 = "2b1641428dff9018f9e85c0384f03ec6c10660d935b750e3fa1492a281a53b0f",
+    urls = [
+        "https://github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
+        "https://mirror.bazel.build/github.com/bazelbuild/rules_go/releases/download/v0.29.0/rules_go-v0.29.0.zip",
+    ],
+)
 ```
 
 To use this repo, you can create a `hack/tools/tools.go` file with a specific build tag `tools` so that it is not compiled by default.  In there, you can import this repository as follow.
@@ -61,25 +61,25 @@ Then update your `go_repository` targets with Gazelle
 This should give you 2 important `go_repository` targets: `co_honnef_go_tools` and `com_github_sluongng_staticcheck_codegen` as follow
 
 ```starlark
-    # Note that this repo uses several malfunction packages as testdata
-    # so we need to tell Gazelle to skip those packages when generate BUILD files
-    #
-    # Don't forget to update this to latest 'version' and matching 'sum'
-    go_repository(
-        name = "co_honnef_go_tools",
-        build_directives = [
-            "gazelle:exclude **/testdata/**",  # keep
-        ],
-        importpath = "honnef.co/go/tools",
-        sum = "<some-hash>",
-        version = "<staticcheck-version>",
-    )
-    go_repository(
-        name = "com_github_sluongng_staticcheck_codegen",
-        importpath = "github.com/sluongng/staticcheck-codegen",
-        sum = "<some-hash>",
-        version = "<latest-version>",
-    )
+# Note that this repo uses several malfunction packages as testdata
+# so we need to tell Gazelle to skip those packages when generate BUILD files
+#
+# Don't forget to update this to latest 'version' and matching 'sum'
+go_repository(
+    name = "co_honnef_go_tools",
+    build_directives = [
+        "gazelle:exclude **/testdata/**",  # keep
+    ],
+    importpath = "honnef.co/go/tools",
+    sum = "<some-hash>",
+    version = "<staticcheck-version>",
+)
+go_repository(
+    name = "com_github_sluongng_staticcheck_codegen",
+    importpath = "github.com/sluongng/staticcheck-codegen",
+    sum = "<some-hash>",
+    version = "<latest-version>",
+)
 ```
 
 Then you can setup your `nogo` target in your build file as follow
