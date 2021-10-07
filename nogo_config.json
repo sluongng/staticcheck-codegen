@@ -535,7 +535,7 @@
       "external/": "third_party"
     }
   },
-  "composite": {
+  "composites": {
     "exclude_files": {
       "external/": "third_party"
     }

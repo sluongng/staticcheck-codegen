@@ -150,8 +150,13 @@ func main() {
 	temp := make(map[string]*config)
 	for _, v := range append(govetChecks, keys...) {
 		c := &config{ExcludeFiles: map[string]string{"external/": "third_party"}}
+
 		if v == "ST1000" {
 			c.ExcludeFiles["rules_go_work"] = "rules_go generated code"
+		}
+
+		if v == "composite" {
+			v = "composites"
 		}
 
 		temp[v] = c
