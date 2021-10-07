@@ -1,4 +1,179 @@
 {
+  "S1000": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1001": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1002": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1003": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1004": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1005": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1006": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1007": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1008": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1009": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1010": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1011": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1012": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1016": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1017": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1018": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1019": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1020": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1021": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1023": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1024": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1025": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1028": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1029": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1030": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1031": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1032": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1033": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1034": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1035": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1036": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1037": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1038": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1039": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
+  "S1040": {
+    "exclude_files": {
+      "external/": "third_party"
+    }
+  },
   "SA1000": {
     "exclude_files": {
       "external/": "third_party"

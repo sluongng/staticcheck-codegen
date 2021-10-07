@@ -176,5 +176,46 @@ STYLECHECK_ANALYZERS = [
     ]
 ]
 
+SIMPLE_ANALYZERS = [
+    "@com_github_sluongng_staticcheck_codegen//_gen/{}:go_default_library".format(package)
+    for package in [
+        "s1000",
+        "s1001",
+        "s1002",
+        "s1003",
+        "s1004",
+        "s1005",
+        "s1006",
+        "s1007",
+        "s1008",
+        "s1009",
+        "s1010",
+        "s1011",
+        "s1012",
+        "s1016",
+        "s1017",
+        "s1018",
+        "s1019",
+        "s1020",
+        "s1021",
+        "s1023",
+        "s1024",
+        "s1025",
+        "s1028",
+        "s1029",
+        "s1030",
+        "s1031",
+        "s1032",
+        "s1033",
+        "s1034",
+        "s1035",
+        "s1036",
+        "s1037",
+        "s1038",
+        "s1039",
+        "s1040",
+    ]
+]
+
 # Provide a sensible default for users to get started easily
-SENSIBLE_ANALYZERS = GO_VET + STATICCHECK_ANALYZERS + STYLECHECK_ANALYZERS
+SENSIBLE_ANALYZERS = GO_VET + STATICCHECK_ANALYZERS + STYLECHECK_ANALYZERS + SIMPLE_ANALYZERS

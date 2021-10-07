@@ -14,6 +14,7 @@ import (
 	"text/template"
 
 	"honnef.co/go/tools/analysis/lint"
+	"honnef.co/go/tools/simple"
 	"honnef.co/go/tools/staticcheck"
 	"honnef.co/go/tools/stylecheck"
 )
@@ -31,8 +32,9 @@ var Analyzer = {{ .CheckType }}.Analyzers[{{ .Index }}].Analyzer`
 
 // Some constants
 const (
-	PrefixStyleCheck = "ST"
-	CodeGenDir       = "_gen"
+	PrefixStyleCheck  = "ST"
+	PrefixStaticCheck = "SA"
+	CodeGenDir        = "_gen"
 )
 
 type config struct {
@@ -59,7 +61,7 @@ func main() {
 	}
 
 	keys := []string{}
-	for _, analyzers := range [][]*lint.Analyzer{staticcheck.Analyzers, stylecheck.Analyzers} {
+	for _, analyzers := range [][]*lint.Analyzer{staticcheck.Analyzers, stylecheck.Analyzers, simple.Analyzers} {
 		sort.Slice(analyzers, func(i, j int) bool {
 			return analyzers[i].Analyzer.Name > analyzers[j].Analyzer.Name
 		})
@@ -83,7 +85,10 @@ func main() {
 			}
 
 			// Use stylecheck template instead of
-			checkType := "staticcheck"
+			checkType := "simple"
+			if strings.HasPrefix(k, strings.ToLower(PrefixStaticCheck)) {
+				checkType = "staticcheck"
+			}
 			if strings.HasPrefix(k, strings.ToLower(PrefixStyleCheck)) {
 				checkType = "stylecheck"
 			}
