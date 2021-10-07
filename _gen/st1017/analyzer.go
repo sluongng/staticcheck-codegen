@@ -4,4 +4,4 @@ import (
 	"honnef.co/go/tools/stylecheck"
 )
 
-var Analyzer = stylecheck.Analyzers["ST1017"]
+var Analyzer = stylecheck.Analyzers[6].Analyzer
