@@ -141,23 +141,32 @@ func main() {
 
 	sort.Strings(keys)
 
+	// Analyzers from 'go tool vet help'
 	govetChecks := []string{
 		"asmdecl",
 		"assign",
 		"atomic",
 		"bools",
 		"buildtag",
+		// "cgocall",
 		"composite",
 		"copylock",
+		// "errorsas",
+		// "framepointer",
 		"httpresponse",
+		// "ifaceassert",
 		"loopclosure",
 		"lostcancel",
 		"nilfunc",
 		"printf",
 		"shift",
+		// "sigchanyzer",
 		"stdmethods",
+		// "stringintconv",
 		"structtag",
+		// "testinggoroutine",
 		"tests",
+		// "unmarshal",
 		"unreachable",
 		"unsafeptr",
 		"unusedresult",

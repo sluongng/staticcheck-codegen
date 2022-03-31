@@ -4,4 +4,4 @@ import (
 	"honnef.co/go/tools/staticcheck"
 )
 
-var Analyzer = staticcheck.Analyzers[82].Analyzer
+var Analyzer = staticcheck.Analyzers[88].Analyzer

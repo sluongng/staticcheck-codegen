@@ -4,4 +4,4 @@ import (
 	"honnef.co/go/tools/quickfix"
 )
 
-var Analyzer = quickfix.Analyzers[9].Analyzer
+var Analyzer = quickfix.Analyzers[10].Analyzer

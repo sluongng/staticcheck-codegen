@@ -2,12 +2,13 @@ module github.com/sluongng/staticcheck-codegen
 
 go 1.17
 
-require honnef.co/go/tools v0.2.1
+require honnef.co/go/tools v0.3.0
 
 require (
-	github.com/BurntSushi/toml v0.4.1 // indirect
-	golang.org/x/mod v0.5.1 // indirect
-	golang.org/x/sys v0.0.0-20211004093028-2c5d950f24ef // indirect
-	golang.org/x/tools v0.1.7 // indirect
+	github.com/BurntSushi/toml v1.0.0 // indirect
+	golang.org/x/exp/typeparams v0.0.0-20220328175248-053ad81199eb // indirect
+	golang.org/x/mod v0.6.0-dev.0.20220106191415-9b9b3d81d5e3 // indirect
+	golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f // indirect
+	golang.org/x/tools v0.1.11-0.20220316014157-77aa08bb151a // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 )

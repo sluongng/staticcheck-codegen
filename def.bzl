@@ -47,15 +47,22 @@ GO_VET = [
         # "cgocall",
         "composite",
         "copylock",
+		"# "# "errorsas",
+        # "framepointer",
         "httpresponse",
+        # "ifaceassert",
         "loopclosure",
         "lostcancel",
         "nilfunc",
         "printf",
         "shift",
+        # "sigchanyzer",
         "stdmethods",
+        # "stringintconv",
         "structtag",
+        # "testinggoroutine",
         "tests",
+        # "unmarshal",
         "unreachable",
         "unsafeptr",
         "unusedresult",
@@ -126,6 +133,10 @@ STATICCHECK_ANALYZERS = [
         "sa4025",
         "sa4026",
         "sa4027",
+        "sa4028",
+        "sa4029",
+        "sa4030",
+        "sa4031",
         "sa5000",
         "sa5001",
         "sa5002",
@@ -149,6 +160,8 @@ STATICCHECK_ANALYZERS = [
         "sa9004",
         "sa9005",
         "sa9006",
+        "sa9007",
+        "sa9008",
     ]
 ]
 
@@ -231,6 +244,7 @@ QUICKFIX_ANALYZERS = [
         "qf1009",
         "qf1010",
         "qf1011",
+        "qf1012",
     ]
 ]
 
