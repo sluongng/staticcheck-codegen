@@ -1,3 +1,5 @@
+Note: deprecated over https://github.com/sluongng/nogo-analyzer
+
 # staticcheck codegen
 
 Currently Bazel `rules_go`'s linter runner nogo does not support multiple analysis.Analyzer
